@@ -1,0 +1,78 @@
+.instructions {
+  margin: 16px 0;
+}
+
+.instructions-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+}
+
+.instruction-step {
+  counter-increment: step-counter;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: var(--background);
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary-color);
+  position: relative;
+  padding-left: 48px;
+}
+
+.instruction-step::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.instruction-step:last-child {
+  margin-bottom: 0;
+}
+
+.instructions-notes {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #fff9e6;
+  border-radius: 6px;
+  border-left: 4px solid #f39c12;
+}
+
+.instructions-notes h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.instructions-notes p {
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .instruction-step {
+    padding: 12px;
+    padding-left: 44px;
+    font-size: 14px;
+  }
+
+  .instruction-step::before {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    left: 12px;
+    top: 12px;
+  }
+}
+

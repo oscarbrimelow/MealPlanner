@@ -1,0 +1,153 @@
+.ingredients-list {
+  margin: 16px 0;
+}
+
+.ingredients-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.ingredients-table thead {
+  background-color: var(--background);
+}
+
+.ingredients-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.ingredients-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ingredients-table tbody tr:hover {
+  background-color: var(--background);
+}
+
+.ingredients-table tbody tr.optional {
+  opacity: 0.8;
+}
+
+.ingredient-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.optional-badge {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.ingredient-note {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-left: 4px;
+}
+
+.ingredient-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.unit-display {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.ingredient-price {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.price-per-unit {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: normal;
+  margin-top: 4px;
+}
+
+.no-price {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ingredients-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.servings-info {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.servings-info strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .ingredients-table {
+    font-size: 14px;
+  }
+
+  .ingredients-table th,
+  .ingredients-table td {
+    padding: 8px;
+  }
+
+  .ingredient-quantity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .quantity-input {
+    width: 100%;
+  }
+
+  .price-per-unit {
+    font-size: 11px;
+  }
+}
+
+@media print {
+  .quantity-input {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+  }
+
+  .ingredients-footer {
+    display: none;
+  }
+}
+
